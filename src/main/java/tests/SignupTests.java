@@ -1,2 +1,6 @@
-package tests;public class SignupTests {
+package tests;
+
+import config.AppiumConfig;
+
+public class SignupTests extends AppiumConfig {
 }
