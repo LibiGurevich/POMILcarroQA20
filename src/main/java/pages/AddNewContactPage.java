@@ -10,22 +10,22 @@ public class AddNewContactPage extends BasePage{
         super(driver);
     }
 
-    @FindBy(xpath = "//*[@resourse-id='com.sheygam.contactapp:id/inputName'")
+    @FindBy(xpath = "//*[@resource-id='com.sheygam.contactapp:id/inputName']")
     MobileElement inputName;
 
-    @FindBy(xpath = "//*[@resourse-id='com.sheygam.contactapp:id/inputLastName'")
+    @FindBy(xpath = "//*[@resource-id='com.sheygam.contactapp:id/inputLastName']")
     MobileElement inputLastName;
 
-    @FindBy(xpath = "//*[@resourse-id='com.sheygam.contactapp:id/inputEmail'")
+    @FindBy(xpath = "//*[@resource-id='com.sheygam.contactapp:id/inputEmail']")
     MobileElement inputEmail;
 
-    @FindBy(xpath = "//*[@resourse-id='com.sheygam.contactapp:id/inputPhone'")
+    @FindBy(xpath = "//*[@resource-id='com.sheygam.contactapp:id/inputPhone']")
     MobileElement inputPhone;
 
-    @FindBy(xpath = "//*[@resourse-id='com.sheygam.contactapp:id/inputAddress'")
+    @FindBy(xpath = "//*[@resource-id='com.sheygam.contactapp:id/inputAddress']")
     MobileElement inputAddress;
 
-    @FindBy(xpath = "//*[@resourse-id='com.sheygam.contactapp:id/inputDesc'")
+    @FindBy(xpath = "//*[@resource-id='com.sheygam.contactapp:id/inputDesc']")
     MobileElement inputDescription;
 
     @FindBy(xpath = "//*[@resource-id='com.sheygam.contactapp:id/createBtn']")
@@ -76,6 +76,7 @@ return this;
     }
 
     public ContactListPage addNewContact(ContactDTO contact){
+        pause(5000);
         return sendTextInputName(contact.getName())
                 .sendTextInputLastName(contact.getLastName())
                 .sendTextInputEmail(contact.getEmail())

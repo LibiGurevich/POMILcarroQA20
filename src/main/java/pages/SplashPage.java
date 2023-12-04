@@ -13,7 +13,11 @@ public class SplashPage extends BasePage{
     MobileElement versionText;
 
     public boolean validateVersionCorrect() {
-        pause(5000);
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         return isTextEqual(versionText, "Version 1.0.0");
     }
 

@@ -50,7 +50,7 @@ public void afterPause(){
     public void positiveAddNewContact(){
     int i;
     i = new Random().nextInt(1000)+1000;
-
+String phone = "1234567" + i;
 Assert.assertTrue(new ContactListPage(driver).clickBtnAddNewContact()
         .addNewContact(ContactDTO.builder()
                 .name("testQA20" + i)
@@ -60,7 +60,7 @@ Assert.assertTrue(new ContactListPage(driver).clickBtnAddNewContact()
                 .address("Haifa")
                 .description("contact: " + i)
                 .build())
-        .validateCurrentContactCreated(i));
+        .validateCurrentContactCreated(ContactDTO.builder().build(), phone));
 }
 
 @Test

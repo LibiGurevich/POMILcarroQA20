@@ -10,7 +10,7 @@ import pages.SplashPage;
 
 public class LoginTests extends AppiumConfig {
 
-//    @FindBy(xpath = "//*[@resourse-id='com.sheygam.contactapp:id/action_bar'")
+//    @FindBy(xpath = "//*[@resource-id='com.sheygam.contactapp:id/action_bar'")
 //    MobileElement contactBar;
 
     @Test
